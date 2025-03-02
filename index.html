@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <title>Cart</title>
+    <style>
+     body,html{
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+}
+.container{
+    background-color: rgb(109, 57, 79);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.box1{
+    font-size: xx-large;
+}
+.box2{
+    /* background-color: antiquewhite; */
+    font-size: xx-large;
+    padding: 5px 35px;
+    text-align: center;
+}
+#cart{
+    height: 35px;
+    width: 300px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgb(224, 156, 199);
+    border: 2px solid rgb(31, 16, 22);
+}
+#cart:hover{
+    transition: transform 0.6s;
+    transform: scale(1.05);
+}
+#button1{
+    background-color: rgb(103, 109, 103);
+    text-align: center;
+    font-size: 15px;
+    height: 35px;
+    width: 150px;
+    border-radius: 20px;
+}
+#button2{
+    background-color: rgb(227, 137, 137);
+    font-size: 15px;
+    text-align: center;
+    height: 35px;
+    width: 150px;
+    border-radius: 20px;
+}
+#button1:hover,#button2:hover{
+    transition: transform 0.8s;
+    transform: scale(1.08);
+    font-weight: bold;
+}   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h2>Cart Quantity</h2>
+        </div>
+        <div class="box2">
+            <label for="Select Quantity"></label>
+                <Select id="cart">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </Select>
+            </label>
+        </div><br>
+        <div class="box3">
+            <button id="button1" onclick="add()">Add to Cart</button>
+            <button id="button2" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        function add(){
+    let value=document.getElementById('cart').value;
+    alert(value+" items added");
+}
+function reset(){
+    value=0;
+    alert(value+" items left");
+}
+    </script>
+</body>
+</html>
